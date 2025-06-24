@@ -1,4 +1,2 @@
-select 
-* 
-from 
-{{source('raw_data', 'customers')}}
+select * from 
+{{ source('raw_data', 'customers') }}
