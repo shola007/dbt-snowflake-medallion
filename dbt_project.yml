@@ -1,5 +1,4 @@
 
-
 name: 'dbt_snowflake_project'
 version: '1.0.0'
 
@@ -23,7 +22,7 @@ models:
       +materialized: view
       +database: BRONZE         
     silver:
-      +materialized: view
+      +materialized: incremental
       +database: SILVER
     gold:
       +materialized: table
