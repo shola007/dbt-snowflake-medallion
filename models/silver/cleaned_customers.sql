@@ -16,6 +16,5 @@ select *
 from ranked_customers
 where row_num = 1
 {% if is_incremental() %}
-  -- Only get new or updated records since last run
   and updated_at > (select max(updated_at) from {{ this }})
 {% endif %}
